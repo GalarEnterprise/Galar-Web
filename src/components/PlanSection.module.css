@@ -1,0 +1,72 @@
+.planSection {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNumber {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--accent-mint);
+  transition: var(--transition-fast);
+}
+
+.step:hover .stepNumber {
+  transform: scale(1.1);
+  background-color: var(--accent-mint);
+  color: var(--text-primary);
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  color: var(--text-secondary);
+}
+
+.stepConnector {
+  flex: 0 0 50px;
+  height: 2px;
+  background: dashed 2px var(--border-color);
+  margin-top: 35px;
+}
+
+@media (max-width: 992px) {
+  .stepsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .stepConnector {
+    display: none;
+  }
+}

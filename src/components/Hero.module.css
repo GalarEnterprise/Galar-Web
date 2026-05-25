@@ -1,0 +1,51 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Glowing Tech Blobs for Dark Aesthetics */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+.blob1 {
+  width: 600px;
+  height: 600px;
+  background-color: var(--accent-blue);
+  top: -150px;
+  right: -150px;
+}
+
+.blob2 {
+  width: 500px;
+  height: 500px;
+  background-color: var(--accent-lavender);
+  bottom: -100px;
+  left: -200px;
+  animation-delay: -4s;
+}

@@ -1,0 +1,108 @@
+.eduSection {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  margin: 0 20px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.125rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.accordionHeader:hover {
+  color: var(--accent-blue-hover);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-right: 1rem;
+}
+
+.mythBadge {
+  color: var(--accent-peach);
+  font-weight: 700;
+  background-color: rgba(244, 63, 94, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.mythText {
+  line-height: 1.4;
+}
+
+.iconToggle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: var(--transition-fast);
+}
+
+.active .iconToggle {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: var(--accent-blue);
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.active .accordionContent {
+  transition: max-height 0.4s ease-in-out;
+}
+
+.accordionContent p {
+  padding: 0.5rem 0 1.5rem 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.realityBadge {
+  color: var(--accent-mint);
+  font-weight: 700;
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  margin-right: 0.25rem;
+}

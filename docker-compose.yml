@@ -1,0 +1,38 @@
+# Development Docker Compose
+# Sets up hot reload and Compose Watch for Next.js development
+
+services:
+  nextjs-prod-standalone:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: nextjs-sample:prod
+    container_name: nextjs-sample-prod
+    ports:
+      - "3000:3000"
+
+  nextjs-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: nextjs-sample:dev
+    container_name: nextjs-sample-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - WATCHPACK_POLLING=true
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+        - action: rebuild
+          path: package.json
+
+networks:
+  ai-network:
+    external: true
+
