@@ -1,4 +1,4 @@
-import Button from './ui/Button';
+import Button from '@/components/ui/Button';
 import styles from './CTASection.module.css';
 
 export default function CTASection() {

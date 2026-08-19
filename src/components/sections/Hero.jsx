@@ -1,4 +1,4 @@
-import Button from './ui/Button';
+import Button from '@/components/ui/Button';
 import styles from './Hero.module.css';
 
 export default function Hero() {
